@@ -2,14 +2,14 @@
 name = "projecthub-backend"
 version = "0.1.0"
 description = "ProjectHub backend API"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.14"
 dependencies = [
     "Flask==1.1.4",
     "Flask-SQLAlchemy==2.3.2",
     "SQLAlchemy==1.4.0",
     "Flask-CORS==4.0.0",
     "Flask-JWT-Extended==3.13.1",
-    "psycopg2-binary==2.9.9",
+    "psycopg2-binary==2.9.9,<3",
     "PyJWT==2.8.0",
     "Werkzeug==1.0.1",
     "python-dotenv==0.10.0",
