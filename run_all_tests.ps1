@@ -12,7 +12,7 @@ $projectRoot = Get-Location
 Write-Host "1. BACKEND TESTS" -ForegroundColor Yellow
 Write-Host "=====================================" -ForegroundColor Yellow
 Set-Location "$projectRoot\backend"
-python -m unittest discover -v tests
+uv run python -m unittest discover -v tests
 $backendExitCode = $LASTEXITCODE
 
 Write-Host ""

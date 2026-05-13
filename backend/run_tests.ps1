@@ -1,5 +1,7 @@
 # PowerShell script to run backend tests
 # Usage: .\run_tests.ps1
+# Requires: uv (https://docs.astral.sh/uv/)
+#   Install deps first: uv pip install -r requirements-test.txt
 
 Write-Host "Running ProjectHub Backend Tests..." -ForegroundColor Cyan
 Write-Host ""
@@ -11,9 +13,9 @@ if ($currentDir -ne "backend") {
     Set-Location backend
 }
 
-# Run tests using unittest discovery
+# Run tests using uv
 Write-Host "Executing tests..." -ForegroundColor Green
-python -m unittest discover -v tests
+uv run python -m unittest discover -v tests
 
 $exitCode = $LASTEXITCODE
 
